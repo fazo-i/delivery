@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery System</title>
+    <!-- Обнуление стилей -->
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <!-- Поделючение кастомных стилей -->
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="login__form form">
+        <div class="form__title">
+            <div  class="form__name">Вход</div>
+        </div>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="username">Логин</label>
+            <input type="text" name="username" id="username" placeholder="example@gmail.com">
+            <label for="password">Пароль</label>
+            <input type="password" name="password" id="password" placeholder="******">
+            <input type="checkbox" class="custom-checkbox" name="remember_me" id="remember_me">
+            <label for="remember_me">Запомнить меня</label>
+            <button type="submit">Войти<img src="{% static 'img/icons/arrow.svg' %}" alt=""></button>
+        </form>
+
+        <div class="form__footer">
+            <a href="">Забыли пароль?</a>
+        </div>
+    </div>
+</body>
+</html>

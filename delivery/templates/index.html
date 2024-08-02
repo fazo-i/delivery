@@ -1,0 +1,149 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href={% static "css/index/index.css" %}>
+{% endblock links %}
+
+{% block content %}
+    <main class="main">
+        <section class="sc-search container">
+            <!-- Строка поиска -->
+            <div class="search-box">
+                <form action="" method="GET">
+                    <input class="search-box__input" type="text" name="search" >
+                    <button class="search-box__btn" type="submit">
+                        <img src={% static "img/icons/search.svg" %} alt="">
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="sc-filer container">
+            <!-- Фильтрация по статусу -->
+            <div class="status-box">
+                <a class="btn status-box__btn" href="">Создан</a>
+                <a class="btn status-box__btn" href="">На пути в консилиум</a>
+                <a class="btn status-box__btn" href="">В консилиуме</a>
+                <a class="btn status-box__btn" href="">На пути к координатору</a>
+                <a class="btn status-box__btn" href="">У координатора</a>
+                <a class="btn status-box__btn" href="">На пути в ТБ-центр</a>
+                <a class="btn status-box__btn" href="">Завершен</a>
+            </div>
+        </section>
+
+        <section class="sc-list container">
+            {% for docpack in docpacks %}
+            <!-- Карточка пакета документов -->
+            <div class="doc-pack">
+                <div class="doc-pack__title">
+                    <h3 class="doc-pack__number">{{docpack.number}}</h3>
+                    <div class="doc-pack__status">{{docpack.status.name}}</div>
+                </div>
+                <div class="doc-pack__content">
+                    <div class="doc-pack__item">
+                        <p>Откуда:</p>
+                        <div>{{docpack.TB_center}}</div>
+                    </div>
+                    <div class="doc-pack__item">
+                        <p>Куда:</p>
+                        <div>{{docpack.consilium}}</div>
+                    </div>
+                    <div class="doc-pack__item">
+                        <p>Дата и время создания:</p>
+                        <div>{{docpack.created|date:"d.m.Y H:i"}}</div>
+                    </div>
+                    <div class="doc-pack__item">
+                        <p>Создал:</p>
+                        <div>Рахматджанов Владислав Витальевич</div>
+                    </div>
+                    <div class="doc-pack__item">
+                        <p>Координатор:</p>
+                        <div>Рахматджанов Владислав Витальевич</div>
+                    </div>
+                    <div class="doc-pack__item">
+                        <p>Курьер:</p>
+                        <div>Рахматджанов Владислав Витальевич</div>
+                    </div>
+                </div>
+                <div class="doc-pack__actions">
+                    <a class="btn doc-pack__btn" href="">Подробнее</a>
+                </div>
+            </div>
+
+            {% endfor %}
+
+            <div class="doc-pack">
+                <div class="doc-pack__title">
+                    <h3 class="doc-pack__number">#000001</h3>
+                    <div class="doc-pack__status">На пути к координатору</div>
+                </div>
+                <div class="doc-pack__content">
+                    <div class="doc-pack__item">
+                        <p>Откуда:</p>
+                        <div>ТБ-центр: г. Худжанд, 12-й микрорайон, строение 17Г</div>
+                    </div>
+                    <div class="doc-pack__item">
+                        <p>Куда:</p>
+                        <div>Консилиум: г. Худжанд, 12-й микрорайон, строение 17Г</div>
+                    </div>
+                    <div class="doc-pack__item">
+                        <p>Дата и время создания:</p>
+                        <div>06.07.2024 18:41</div>
+                    </div>
+                    <div class="doc-pack__item">
+                        <p>Создал:</p>
+                        <div>Рахматджанов Владислав Витальевич</div>
+                    </div>
+                    <div class="doc-pack__item">
+                        <p>Координатор:</p>
+                        <div>Рахматджанов Владислав Витальевич</div>
+                    </div>
+                    <div class="doc-pack__item">
+                        <p>Курьер:</p>
+                        <div>Рахматджанов Владислав Витальевич</div>
+                    </div>
+                </div>
+                <div class="doc-pack__actions">
+                    <a class="btn doc-pack__btn" href="">Подробнее</a>
+                </div>
+            </div>
+
+            <div class="doc-pack">
+                <div class="doc-pack__title">
+                    <h3 class="doc-pack__number">#000001</h3>
+                    <div class="doc-pack__status">На пути к координатору</div>
+                </div>
+                <div class="doc-pack__content">
+                    <div class="doc-pack__item">
+                        <p>Откуда:</p>
+                        <div>ТБ-центр: г. Худжанд, 12-й микрорайон, строение 17Г</div>
+                    </div>
+                    <div class="doc-pack__item">
+                        <p>Куда:</p>
+                        <div>Консилиум: г. Худжанд, 12-й микрорайон, строение 17Г</div>
+                    </div>
+                    <div class="doc-pack__item">
+                        <p>Дата и время создания:</p>
+                        <div>06.07.2024 18:41</div>
+                    </div>
+                    <div class="doc-pack__item">
+                        <p>Создал:</p>
+                        <div>Рахматджанов Владислав Витальевич</div>
+                    </div>
+                    <div class="doc-pack__item">
+                        <p>Координатор:</p>
+                        <div>Рахматджанов Владислав Витальевич</div>
+                    </div>
+                    <div class="doc-pack__item">
+                        <p>Курьер:</p>
+                        <div>Рахматджанов Владислав Витальевич</div>
+                    </div>
+                </div>
+                <div class="doc-pack__actions">
+                    <a class="btn doc-pack__btn" href="">Подробнее</a>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock content %}

@@ -1,0 +1,29 @@
+@import url("../main.css");
+
+.sc-add-user {
+    background-color: var(--second-color);
+}
+
+.form__item {
+    margin-top: 10px;
+}
+
+.form input {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px var(--bg-element-color) solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.form select {
+    width: 100%;
+    cursor: pointer;
+    border: 1px var(--border-color) solid;
+    background-color: var(--second-color);
+    border-radius: 10px;
+    padding: 10px;
+}

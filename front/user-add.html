@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery AS</title>
+
+    <link rel="stylesheet" href="../delivery/static/css/reset.css">
+    <link rel="stylesheet" href="../delivery/static/css/index/header.css">
+    <link rel="stylesheet" href="../delivery/static/css/user/user-add.css">
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header class="header container">
+
+            <div class="header__burger">
+                <span></span>
+            </div>
+
+            <div class="header__avatar">
+                ВР
+            </div>
+
+            <nav class="header__navigation nav">
+                <ul>
+                    <li class="nav__item">
+                        <img src="../delivery/static/img/icons/user.svg" alt="">
+                        <a href="">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <img src="../delivery/static/img/icons/user.svg" alt="">
+                        <a href="">Создать заявку</a>
+                    </li>
+                    <li class="nav__item">
+                        <img src="../delivery/static/img/icons/user.svg" alt="">
+                        <a href="">Профиль</a>
+                    </li>
+                    <li class="nav__item">
+                        <img src="../delivery/static/img/icons/user.svg" alt="">
+                        <a href="">Контакты</a>
+                    </li>
+                    <li class="nav__item">
+                        <img src="../delivery/static/img/icons/user.svg" alt="">
+                        <a href="">Добавить пользователя</a>
+                    </li>
+                    <li class="nav__item">
+                        <img src="../delivery/static/img/icons/exit.svg" alt="">
+                        <a href="">Выход</a>
+                    </li>
+                </ul>
+            </nav>
+
+    </header>
+
+    <main class="main">
+        <section class="sc-add-user container">
+            <div class="add-user">
+                <form class="add-user__form form" action="" method="POST">
+
+                    <div class="form__item">
+                        <label class="form__label" for="">Имя</label>
+                        <input class="form__input" type="text" placeholder="">
+                    </div>
+
+                    <div class="form__item">
+                        <label class="form__label" for="">Должность</label>
+                        <select class="form__select" name="" id="">
+                            <option value="0">0</option>
+                        </select>
+                    </div>
+                    <button type="submit">Добавить</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="../delivery/static/js/burger.js"></script>
+</body>
+</html>

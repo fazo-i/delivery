@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href={% static "css/user/user-add.css" %}>
+{% endblock links %}
+
+{% block content %}
+
+<main class="main">
+    <section class="sc-add-user container">
+        <div class="add-user">
+            <form class="add-user__form form" action={% url 'index' %} method="POST">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form__item">
+                        {{field.label}}
+                        {{field}}
+                    </div>
+                {% endfor %}
+                <button class="form__button btn" type="submit">Добавить</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+{% endblock content %}

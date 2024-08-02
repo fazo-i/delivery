@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery AS</title>
+
+    <link rel="stylesheet" href={% static "css/reset.css" %}>
+    <link rel="stylesheet" href={% static "css/index/header.css" %}>
+    {% block links %}{% endblock links %}
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header class="header container">
+
+            <div class="header__burger">
+                <span></span>
+            </div>
+
+            <div class="header__avatar">
+                ВР
+            </div>
+
+            <nav class="header__navigation nav">
+                <ul>
+                    <li class="nav__item">
+                        <img src={% static "img/icons/user.svg" %} alt="">
+                        <a href={% url 'index' %}>Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <img src={% static "img/icons/user.svg" %} alt="">
+                        <a href="">Создать заявку</a>
+                    </li>
+                    <li class="nav__item">
+                        <img src={% static "img/icons/user.svg" %} alt="">
+                        <a href="">Профиль</a>
+                    </li>
+                    <li class="nav__item">
+                        <img src={% static "img/icons/user.svg" %} alt="">
+                        <a href="">Контакты</a>
+                    </li>
+                    <li class="nav__item">
+                        <img src={% static "img/icons/user.svg" %} alt="">
+                        <a href={% url 'users-page' %}>Пользователи</a>
+                    </li>
+                    <li class="nav__item">
+                        <img src={% static "img/icons/user.svg" %} alt="">
+                        <a href={% url 'user-add' %}>Добавить пользователя</a>
+                    </li>
+                    <li class="nav__item">
+                        <img src={% static "img/icons/exit.svg" %} alt="">
+                        <a href="">Выход</a>
+                    </li>
+                </ul>
+            </nav>
+
+    </header>
+
+    {% block content %}{% endblock content %}
+
+    <script src={% static "js/burger.js" %}></script>
+</body>
+</html>

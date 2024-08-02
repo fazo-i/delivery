@@ -1,0 +1,115 @@
+@import url("./main.css");
+
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--main-color);
+}
+
+.login__form {
+    background-color: var(--second-color);
+    min-width: 320px;
+    min-height: 400px;
+    padding: 35px 20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.form__name {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.login__form form input{
+    display: block;
+    min-width: 280px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 25px;
+    border: 1px solid var(--border-color);
+    outline: 0;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.login__form form label{
+    display: block;
+    margin-bottom: 8px;
+}
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.custom-checkbox:checked+label::before {
+    border-color: var(--main-color);
+    background-color: var(--main-color);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.login__form form input:focus{
+    border: 1px solid var(--main-color);
+}
+
+.login__form form button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--main-color);
+    color: #fff;
+    outline: 0;
+    margin: 30px auto;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.login__form form button img {
+    display: inline;
+    margin-left: 8px;
+}
+
+.form__footer {
+    display: flex;
+    justify-content: center;
+}
+
+.form__footer a {
+    color: var(--main-color);
+}
+

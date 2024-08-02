@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href={% static "css/user/users-page.css" %}>
+{% endblock links %}
+
+{% block content %}
+
+<main class="main">
+    <section class="sc-users-list container">
+        <div class="users-list">
+            Врачи-фтизиатры
+            {% for user in users %}
+                {% if user.position == "Врач-фтизиатр" %}
+                    <div class="user__container">
+                        <div class="user__name">{{user.first_name}} {{user.last_name}} {{user.parent_name}}</div>
+                        <div class="user__TB-center">{{user.TB_center.city}} {{user.TB_center.address}}</div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+
+</main>
+
+{% endblock content %}

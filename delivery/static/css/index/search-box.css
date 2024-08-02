@@ -1,0 +1,40 @@
+@import url("../main.css");
+
+.search-box {
+    margin-top: 40px;
+    background-color: var(--second-color);
+    border-radius: 35px;
+    padding: 10px 15px;
+}
+
+.search-box__btn {
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.search-box__input {
+    width: 90%;
+    transition: 0.4s;
+}
+
+.sc-filer {
+    margin-top: 20px;
+}
+
+.status-box {
+    display: flex;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+}
+
+.status-box::-webkit-scrollbar {
+    display: none;
+}
+
+.status-box__btn {
+    margin-right: 7px;
+}
+
